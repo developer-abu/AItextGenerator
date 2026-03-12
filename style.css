@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html,body{
+height: 100%;
+}
+
+  /*main container as display flex will be used for layout*/
+
+#contanier{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 0.5px black solid;
+}
+/* header item div */
+#headerItem{
+    width: 100%;
+    background-color: black;
+}
+/* header item div h1 */
+#headerItem h1{
+    color: white;
+   text-align: center;
+   padding: 10px 0;
+}
+/* main content area where conversation will be displayed */
+#mainContent{
+   height: 80%;
+    background-color: rgb(141, 139, 139);
+    overflow-y: auto;
+}
+/* send prompt section */
+#sendMassageSection{
+    height: 10%;
+    background-color: white;
+    border-top: 0.2px black solid;
+    border-bottom: 0.2px black solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* send prompt section container */
+#sendMassageContainer{
+height: 80%;
+width: 80%;
+}
+/* input box for the typing  */
+#sendMassageContainer input{
+height: 100%;
+width: 90%;
+border-radius: 25px;
+font-size: 27px;
+padding:8px 12px;
+}
+/* send btn as img , will be used to send prompt  */
+#sendButton{
+height: 30px;
+width: 30px;
+margin-left: -7%;
+cursor: pointer;
+}
+    /* input Text By User */
+
+.inputTextByUser{
+        background-color: #4A90E2;
+        padding: 8px;
+        color: white;
+        border-radius: 8px;
+        display:block;
+        width: fit-content;
+        max-width: 50%;
+        margin-left:auto;
+        margin-top:10px;
+        margin-right: 50px;
+        font-size: 25px;
+    }
+
+.ans{
+        background-color: white;
+        padding: 8px;
+        color: black;
+        border-radius: 8px;
+        display:block;
+        width: fit-content;
+        max-width: 50%;
+        margin-left:10px;
+        margin-top:10px;
+       font-size: 23px;
+    }
+
+@media (max-width:250px) {
+#sendMassageContainer input{
+font-size: 18px;
+}
+.inputTextByUser{
+    
+      font-size: 15px;
+    }
+}
+@media (min-width:251px) and (max-width:500px) {
+#sendMassageContainer input{
+font-size: 25px;
+}
+.inputTextByUser{
+      font-size: 22px;
+    }
+}
+@media (min-width:501px) and (max-width:700px) {
+#sendMassageContainer input{
+font-size: 30px;
+}
+.inputTextByUser{
+      font-size: 28px;
+    }
+}
