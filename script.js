@@ -24,6 +24,13 @@ async function serverResponse(prompt){
 
 const apiUrl = "https://backend.buildpicoapps.com/aero/run/llm-api?pk=v1-Z0FBQUFBQnBzb0Y0VW9fZ3YyVVlxc0FrQzhEdTRXaTF3VVlrZW1PVFdrOXhfV2YzUXVtM0M0RHo3bkxnY3UyRTctVV9fVjZaSllxa2lRQW91WUxJMHlTRFlES1UtQy15Y3c9PQ==";
 
+// loading message
+let loading = document.createElement("div");
+loading.innerText = "AI is generating your answer...";
+loading.classList.add("ans");
+
+mainContentArea.appendChild(loading);
+
 const response = await fetch(apiUrl,{
 method:"POST",
 headers:{
@@ -34,7 +41,11 @@ prompt: prompt
 })
 });
 
+
 const data = await response.json();
+
+// remove loading text
+loading.remove();
 
 // storing AI response and showing in the screen
 
