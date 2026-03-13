@@ -1,6 +1,6 @@
 <h1 align="center">🤖 AI Chat Assistant</h1>
 
-<img src="photo/front.png" width="100%" height="55px">
+<img src="photo/front.png" width="100%" height="505px">
 
 <p>
 A simple <b>AI Chat Assistant Web Application</b> where users can ask questions and receive AI-generated responses instantly.
